@@ -1,17 +1,27 @@
-// two sum
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int i,j;
-        for(i=0;i<nums.length;i++)
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int len = nums.length;
+        int i;
+        for(i=0;i<len;i++)
         {
-            for(j=i+1;j<nums.length;j++)
+            map.put(nums[i],i);
+        }
+
+        for(i=0;i<len;i++)
+        {
+            int rem = target - nums[i];
+            if(map.containsKey(rem))
             {
-                if(nums[i]+nums[j]==target)
-                {
-                    return new int[]{i,j};
-                }
+                int index = map.get(rem);
+                if(index==i) continue;
+                return new int[]{i,index};
+
             }
         }
-        return new int[]{-1,-1};
+
+        return new int[]{};
+
+
     }
 }
