@@ -15,14 +15,8 @@ class Solution {
                 ans = ans + s.charAt(i);
              }
         }
-        int size = ans.length();
-
-        // for(int i =size-1;i>=0;i--)
-        // {
-        //     ans2 = ans.charAt(i) + ans2;
-        // }
-
-for(int i = 0; i < ans.length();i++){
+      
+        for(int i = 0; i < ans.length();i++){
 
             ans2 = ans.charAt(i) + ans2;
         }
