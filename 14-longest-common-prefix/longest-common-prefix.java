@@ -6,13 +6,13 @@ class Solution {
         char last[] = strs[strs.length-1].toCharArray();
         for(int i=0;i<first.length;i++)
         {
-            if(first[i]!=last[i])
+            if(first[i]==last[i])
             {
-                break;
+                res.append (first[i]); 
             }
             else 
             {
-                res.append (first[i]); 
+                break;
             }
         }
         return res.toString();
