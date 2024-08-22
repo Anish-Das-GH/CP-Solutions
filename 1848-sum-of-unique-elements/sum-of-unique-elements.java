@@ -1,6 +1,5 @@
 class Solution {
     public int sumOfUnique(int[] nums) {
-       Arrays.sort(nums);
        int sum = 0;
        HashMap <Integer,Integer> map=new HashMap<Integer,Integer>();
        for(int i = 0; i < nums.length; i++) {
